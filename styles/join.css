@@ -1,0 +1,115 @@
+.join {
+    margin-bottom: 80px;
+}
+
+.join__imagem {
+    width: 100%;
+    height: 255px;
+    margin-bottom: 30px;
+}
+
+.join__email, .join__botao {
+    padding: 12px 20px;
+    border-radius: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+}
+
+.join__email::placeholder{
+    color: black;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.join__botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--purple);
+    color: var(--branco);
+    margin-top: 28px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.join__botao:hover {
+    scale: 0.97;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.join__botao img {
+    margin-right: 10px;
+}
+
+@media screen and (min-width:768px) {
+    .join__imagem {
+        width: 300px;
+        height: 280px;
+        margin-bottom: 0;
+    }
+
+    .join {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        column-gap: 30px;
+        background-color: var(--background-cards);
+        border-radius: 20px;
+        padding: 20px 30px;
+        }
+
+    .join__container {
+        height: 280px;
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+
+
+    .join__botao  {
+        margin-top: 0;
+        margin-top: 15px;
+    }
+
+    .join__container > .titulo, .join__container > .descricao  {
+        margin-bottom: 0;
+    }
+
+    .join__container form {
+        width: 100%;
+    }
+
+}
+
+@media screen and (min-width:1024px) {
+
+    .join {
+        padding: 60px;
+        max-width: 964px;
+        margin: 0 auto 80px;
+    }
+
+    .join__imagem {
+        width: 425px;
+        height: 310px;
+    }
+    .join__container > form {
+        position: relative;
+        max-width: 434px;
+    }
+
+
+    .join__botao {
+        margin-top: 0;
+        position: absolute;
+        width: 35%;
+        right: 0;
+        bottom: 0px;
+        height: 39px;
+    }
+}

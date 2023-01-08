@@ -1,0 +1,153 @@
+.rodape {
+    background-color: var(--background-cards);
+    padding: 40px 30px;
+}
+
+.rodape__secao {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    margin-bottom: 30px;
+}
+
+.rodape__titulo {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.rodape__descricao, .rodape__link {
+    font-weight: 400;
+    font-size: 16px;
+    color: var(--cinza);
+    text-decoration: none;
+}
+
+.rodape__link:hover {
+    color: var(--purple);
+    transition: 0.3s;
+}
+
+.redes__link:hover > img {
+    scale: 0.90;
+    transition: 0.3s;
+}
+
+.rodape__secao > form > button {
+    margin-top: 16px;
+}
+
+.rodape__copyright {
+    font-size: 12px;
+    font-weight: 400;
+}
+
+form {
+    width: 100%;
+}
+
+.rodape__email, .rodape__botao {
+    padding: 12px 20px;
+    border-radius: 15px;
+    width: 100%;
+    box-sizing: border-box;
+    border: none;
+}
+
+.rodape__email::placeholder{
+    color: black;
+    margin-left: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.rodape__botao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--purple);
+    color: var(--branco);
+    margin-top: 28px;
+    font-family: 'Work Sans', sans-serif;
+}
+
+.rodape__botao:hover {
+    scale: 0.97;
+    transition: 0.3s;
+    cursor: pointer;
+}
+
+.rodape__botao img {
+    margin-right: 10px;
+}
+
+footer > hr {
+    border-color: var(--cinza-claro);
+    margin-bottom: 20px;
+}
+
+@media screen and (min-width:768px) {
+    .rodape__logo {
+        height: 32px;
+    }
+
+    form {
+        width: 420px;
+        position: relative;
+    }
+
+    .rodape__secao > form > .rodape__botao {
+        position: absolute;
+        width: 179px;
+        right: 0;
+        bottom: 0;
+        margin-top: 0;
+        height: 100%;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .rodape {
+        padding: 40px 115px;
+        display: grid;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        grid-template-areas: 
+        "secao-1 secao-2 secao-3"
+        "divisoria divisoria divisoria"
+        "copy copy copy";
+    }
+
+    .secao-1 {
+        grid-area: secao-1;
+        width: 300px;
+    }
+
+    .secao-2 {
+        grid-area: secao-2;
+    }
+    .secao-3 {
+        grid-area: secao-3;
+        width: 300px;
+    }
+
+    footer > hr {
+        grid-area: divisoria;
+        width: 100%;
+    }
+
+    .rodape__copyright {
+        grid-area: copy;
+    }
+
+    .rodape__email {
+        width: 300px;
+    }
+
+    .rodape__secao > form > .rodape__botao {
+        width: 300px;
+        position: relative;
+        margin-top: 10px;
+    }
+}

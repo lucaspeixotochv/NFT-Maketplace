@@ -1,0 +1,146 @@
+.introducao {
+    margin: 40px 0 80px 0;
+}
+
+.introducao__titulo {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.introducao__texto {
+    font-weight: 400;
+    line-height: 22.4px;
+}
+
+.introducao__card {
+    display: flex;
+    flex-direction: column;
+    border-radius: 25px;
+    margin: 40px 0;
+}
+
+.card__descricao {
+    display: grid;
+    align-items: center;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 22px 20px;
+    background-color: var(--background-cards);
+    border-radius: 0 0 25px 25px; 
+}
+
+.card__titulo {
+    grid-column: span 2;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.card__avatar {
+    margin-right: 12px;
+}
+
+.introducao__link {
+    background-color: var(--purple);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1em;
+    color: var(--branco);
+    text-decoration: none;
+    border-radius: 20px;
+    text-align: center;
+    position: relative;
+    margin-bottom: 40px;
+}
+
+.introducao__link:hover {
+    scale: 0.97;
+    transition: 0.3s;
+}
+
+.introducao__link__imagem {
+    margin-right: 10px;
+}
+
+.introducao__numeros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.numeros__dados {
+    font-family: 'Space Mono', monospace;
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.numeros__titulo {
+    font-weight: 400;
+}
+
+@media screen and (min-width:768px) {
+    .introducao {
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(4, auto);
+        column-gap: 60px;
+    }
+
+    .introducao__card {
+        grid-column: 2;
+        grid-row: span 4;
+        margin: 0;
+    }
+
+    .introducao__titulo {
+        grid-column: 1;
+        grid-row: 1;
+        margin: 0;
+    }
+
+    .introducao__texto {
+        grid-column: 1;
+        grid-row: 2;
+        margin: 0;
+    }
+
+    .introducao__link {
+        grid-column: 1;
+        grid-row: 3;
+        margin: 0;
+        width: 50%;
+    }
+
+    .introducao__numeros {
+        grid-column: 1;
+        grid-row: 4;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width:1024px) {
+    .introducao__titulo {
+        font-size: 67px;
+    }
+
+    .introducao__texto {
+        font-size: 22px;
+    }
+
+    .numeros__dados {
+        font-size: 28px;
+    }
+
+    .numeros__titulo {
+        font-size: 24px;
+    }
+
+    .introducao__numeros {
+        justify-content: flex-start;
+        gap: 60px;
+    }
+
+
+}

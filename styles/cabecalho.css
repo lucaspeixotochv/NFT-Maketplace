@@ -1,0 +1,94 @@
+.cabecalho {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: relative;
+}
+
+#menu {
+    display: none;
+}
+
+.menu__hamburguer__imagem {
+    background-image: url(../img/Burger-Menu.svg);
+    width: 24px;
+    height: 24px;
+    display: inline-block;
+}
+
+.menu__lista {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    padding: 2em 1em;
+    display: none;   
+    z-index: 2;
+}
+
+.lista__item {
+    margin-bottom: 2em;
+}
+
+.item__link {
+    color: var(--branco);
+    text-decoration: none;
+    display: inline-block;
+}
+
+.item__link:hover {
+    color: var(--purple);
+    transition: 0.3s;
+}
+
+#menu:checked ~ .menu__lista {
+    display: block;
+    width: 100vw;
+    background-color: var(--background-cards);
+    box-shadow: 0px 1px black;
+    text-align: center;
+}
+
+.item__link__botao {
+    background-color: var(--purple);
+    padding: .8em;
+    padding-left: 2.5em;
+    border-radius: 25px;
+    text-align: center;
+    position: relative;
+}
+
+.item__link__botao:hover {
+    color: var(--branco);
+    scale: 0.97;
+    transition: 0.3s;
+}
+
+.item__link__botao::before {
+    content: url(../img/User.svg);
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 10px;
+    top: 10px;
+}
+
+@media screen and (min-width:1024px) {
+    .menu__hamburguer {
+        display: none;
+    }
+
+    .menu__lista {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        position: relative;
+        border: none;
+        padding: 0;
+    }
+
+    .lista__item {
+        margin-bottom: 0;
+    }
+}
